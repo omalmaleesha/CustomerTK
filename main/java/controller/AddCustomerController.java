@@ -96,5 +96,16 @@ public class AddCustomerController implements Initializable {
         }
     }
 
+    @FXML
+    void btndeleteOnAction(ActionEvent event) {
+        Stage stage = new Stage();
+        try {
+            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("../view/deleteCustomer.fxml"))));
+            stage.show();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
 
 }
